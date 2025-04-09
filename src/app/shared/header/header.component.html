@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+  <div class="menu-smallscreen">
+    <button mat-icon-button [matMenuTriggerFor]="mobileMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #mobileMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="plansMenu">
+        <span>Csomagok</span>
+      </button>
+      <mat-menu #plansMenu="matMenu">
+        <button mat-menu-item routerLink="/residental/">Lakossági</button>
+        <button mat-menu-item routerLink="/business/">Üzleti</button>
+      </mat-menu>
+      <button mat-menu-item routerLink="/about/" class="nav-item">Rólunk</button>
+      <button mat-menu-item routerLink="/contact/" class="nav-item">Kapcsolat</button>
+    </mat-menu>
+  </div>
+
+  <div class="menu-logo">
+    <button mat-button routerLink="/">CypTelecom</button>
+  </div>
+
+  <div class="menu">
+    <button mat-button [matMenuTriggerFor]="plansMenu">Csomagok</button>
+    <mat-menu #plansMenu="matMenu">
+      <button mat-menu-item routerLink="/residental/">Lakossági</button>
+      <button mat-menu-item routerLink="/business/">Üzleti</button>
+    </mat-menu>
+    <button mat-button routerLink="/about/">Rólunk</button>
+    <button mat-button routerLink="/contact/">Kapcsolat</button>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,21 @@
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: lightgray;
+}
+.header-home{
+  min-height: 120px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  background-color: lightblue;
+  border: none;
+  font-size: 20px;
+}
+.wtext{
+  background-color: beige;
+}

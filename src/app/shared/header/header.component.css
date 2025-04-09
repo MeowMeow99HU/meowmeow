@@ -1,0 +1,21 @@
+.menu-smallscreen {
+  display: none;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: right;
+}
+@media (max-width: 800px) {
+  .menu-smallscreen {
+    display: flex;
+  }
+  .menu{
+    display: none;
+  }
+}
+mat-toolbar {
+  display: flex;
+  flex-grow: 1;
+}

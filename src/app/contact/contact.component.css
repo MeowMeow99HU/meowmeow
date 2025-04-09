@@ -1,0 +1,24 @@
+main{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: lightsteelblue;
+  justify-content: center;
+}
+
+.contactform-container, .contactform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+}
+.contactform{
+  min-width: 350px;
+  width: 45%;
+}

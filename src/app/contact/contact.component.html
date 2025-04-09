@@ -1,0 +1,52 @@
+<main>
+  <div class="contactform-container">
+    <mat-card class="contactform">
+      <div class="row">
+        <mat-card-header>
+          <mat-card-title>
+              Lépj velünk kapcsolatba!
+          </mat-card-title>
+        </mat-card-header>
+      </div>
+      <mat-card-content>
+        <form [formGroup]="contactForm" (ngSubmit)="contactSubmit()">
+
+          <div class="row">
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Teljes Név</mat-label>
+              <input matInput formControlName="fullName">
+              <mat-error *ngIf="contactForm.get('fullName')?.hasError('required') || contactForm.dirty">
+                Adja meg a nevét!
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="row">
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>E-mail cím</mat-label>
+              <input matInput formControlName="email">
+              <mat-error *ngIf="contactForm.get('email')?.hasError('required') || contactForm.get('email')?.hasError('minlength') || contactForm.get('email')?.hasError('email') ||contactForm.dirty">
+                Adjon meg egy email-címet!
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="row">
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Üzenet</mat-label>
+              <input matInput formControlName="message">
+              <mat-error *ngIf="contactForm.get('message')?.hasError('required') ||contactForm.get('message')?.hasError('minlength')">
+                Adja meg a nevét!
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="row">
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+            <button mat-button type="button" (click)="contactForm.reset()">Reset</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</main>

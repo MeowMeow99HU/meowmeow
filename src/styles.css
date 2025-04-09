@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; width: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+app-root{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 100%;
+  min-height: 100%;
+}
+app-header {
+  display: flex;
+}
+app-footer{
+  display: flex;
+  flex-direction: column;
+}
+app-homecontent, app-resplanscontent, app-busplanscontent, app-contact, app-about{
+  display: flex;
+  flex-direction: column;
+  flex-grow:1;
+}
+html{
+  min-width: 300px;
+}
