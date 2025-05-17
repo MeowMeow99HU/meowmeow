@@ -28,4 +28,6 @@ export class HeaderComponent {
   toggleMobileView(){
     this.isMobileViewActive = !this.isMobileViewActive;
   }
+
+  protected readonly localStorage = localStorage;
 }

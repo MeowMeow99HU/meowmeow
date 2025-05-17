@@ -16,7 +16,7 @@ app-footer{
   display: flex;
   flex-direction: column;
 }
-app-homecontent, app-resplanscontent, app-busplanscontent, app-contact, app-about{
+app-homecontent, app-resplanscontent, app-busplanscontent, app-contact, app-about, app-login, app-register, app-logout, app-profile, app-allplansearch{
   display: flex;
   flex-direction: column;
   flex-grow:1;

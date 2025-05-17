@@ -5,7 +5,8 @@ main{
   background: lightsteelblue;
   justify-content: center;
 }
-.contactform-container, .contactform{
+
+.profile-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,11 +14,15 @@ main{
 }
 .row{
   justify-content: center;
+  align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 15px;
 }
-.contactform{
+.col{
   min-width: 350px;
-  width: 45%;
+}
+.profileform{
+  min-width: 350px;
+  width: 50%;
 }

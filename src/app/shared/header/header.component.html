@@ -11,9 +11,17 @@
       <mat-menu #plansMenu="matMenu">
         <button mat-menu-item routerLink="/residental/">Lakossági</button>
         <button mat-menu-item routerLink="/business/">Üzleti</button>
+        <button mat-menu-item routerLink="/allplans/">Mobilcsomagkereső</button>
       </mat-menu>
       <button mat-menu-item routerLink="/about/" class="nav-item">Rólunk</button>
       <button mat-menu-item routerLink="/contact/" class="nav-item">Kapcsolat</button>
+      @if (localStorage.getItem('isLoggedIn') == 'false'){
+        <button mat-menu-item routerLink="/login/" class="nav-item">Bejelentkezés</button>
+      }
+      @if (localStorage.getItem('isLoggedIn') == 'true'){
+        <button mat-menu-item routerLink="/profile/" class="nav-item">Profil</button>
+        <button mat-menu-item routerLink="/logout/" class="nav-item">Kijelentkezés</button>
+      }
     </mat-menu>
   </div>
 
@@ -26,8 +34,16 @@
     <mat-menu #plansMenu="matMenu">
       <button mat-menu-item routerLink="/residental/">Lakossági</button>
       <button mat-menu-item routerLink="/business/">Üzleti</button>
+      <button mat-menu-item routerLink="/allplans/">Mobilcsomagkereső</button>
     </mat-menu>
     <button mat-button routerLink="/about/">Rólunk</button>
     <button mat-button routerLink="/contact/">Kapcsolat</button>
+    @if (localStorage.getItem('isLoggedIn') == 'false'){
+      <button mat-button routerLink="/login/">Bejelentkezés</button>
+    }
+    @if (localStorage.getItem('isLoggedIn') == 'true'){
+      <button mat-button routerLink="/profile/">Profil</button>
+      <button mat-button routerLink="/logout/">Kijelentkezés</button>
+    }
   </div>
 </mat-toolbar>
