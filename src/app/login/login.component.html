@@ -1,0 +1,53 @@
+<main>
+  <div class="login-container">
+    <mat-card class="loginform">
+      <div class="row">
+        <mat-card-header>
+          <mat-card-title>
+            Bejelentkezés
+          </mat-card-title>
+        </mat-card-header>
+      </div>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+
+          <div class="row">
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>E-mail cím</mat-label>
+              <input matInput formControlName="email">
+              <mat-error *ngIf="loginForm.get('email')?.hasError('required') || loginForm.get('email')?.hasError('minlength') || loginForm.get('email')?.hasError('email') ||loginForm.dirty">
+                Adjon meg egy email-címet!
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="row">
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Jelszó</mat-label>
+              <input matInput formControlName="password">
+              <mat-error *ngIf="loginForm.get('password')?.hasError('required') || loginForm.get('password')?.hasError('minlength')">
+                Hibás jelszó!
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="row">
+            <button mat-raised-button color="primary" type="submit">Bejelentkezés</button>
+          </div>
+
+          @if (unexpectedError) {
+            <div class="row">
+              <div class="error-message" style="color:red;">
+                {{ unexpectedError }}
+              </div>
+            </div>
+          }
+
+          <div class="row">
+            <p>Nincs még fiókja? </p> <button mat-menu-item routerLink="/register" style="border: none; border-radius: 4px; margin-left: 15px;">Regisztráljon</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</main>

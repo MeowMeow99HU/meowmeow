@@ -1,9 +1,14 @@
 <main>
-  <div class="header-resplans">
-    <h1>Lakossági mobilszolgáltatás</h1>
+  <div class="header-allplans">
+    <h1>Mobilszolgáltatás kereső</h1>
+  </div>
+  <div class="row">
+    <button (click)="loadPlansByPrice()">Ár alapján</button>
+    <button (click)="loadPlansByUnlimitedDataOutsideHome()">Korlátlan internet külföldön alapján</button>
+    <button (click)="loadPlansByUnlimitedDataAtHome()">Korlátlan internet belföldön alapján</button>
   </div>
   <div class="cards">
-    <div class="card-container" *ngFor="let plan of residentalPlans">
+    <div class="card-container" *ngFor="let plan of searchedPlans">
       <mat-card appearance="outlined">
         <mat-card-header>
           <mat-card-title>{{plan.name | textUpperCase}}</mat-card-title>

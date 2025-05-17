@@ -5,7 +5,8 @@ main{
   background: lightsteelblue;
   justify-content: center;
 }
-.contactform-container, .contactform{
+
+.logout-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,8 +17,4 @@ main{
   display: flex;
   flex-direction: row;
   padding-top: 15px;
-}
-.contactform{
-  min-width: 350px;
-  width: 45%;
 }

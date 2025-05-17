@@ -1,0 +1,36 @@
+<main>
+  <div class="profile-container">
+    <mat-card class="profileform">
+      <div class="row">
+        <mat-card-header>
+          <mat-card-title>
+            Lépj velünk kapcsolatba!
+          </mat-card-title>
+        </mat-card-header>
+      </div>
+      @if(user != null){
+        <mat-card-content>
+          <form>
+            <div class="row">
+              <mat-label>Email-címed</mat-label>
+              <mat-form-field appearance="outline" class="col">
+                <input matInput disabled value="{{user!.email}}">
+              </mat-form-field>
+            </div>
+
+            <div class="row">
+              <mat-label>Előfizetésed:</mat-label>
+              <mat-form-field appearance="outline" class="col">
+                <input matInput disabled value="{{user!.paidplan}}">
+              </mat-form-field>
+            </div>
+
+          </form>
+        </mat-card-content>
+        <div class="row" style="margin-bottom: 15px;">
+          <button (click)="cancelPlan()" mat-raised-button color="primary">Előfizetés lemondása</button>
+        </div>
+      }
+    </mat-card>
+  </div>
+</main>
